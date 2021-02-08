@@ -1,0 +1,21 @@
+{
+  "name": "hello_world_analyzer",
+  "author": "Aaron Kaplan <aaron@lo-res.org>",
+  "license": "AGPL-V3",
+  "url": "https://github.com/aaronkaplan/cortex-analyzers/",
+  "version": "1.0",
+  "description": "A very simple hello world analyzer which does basically not much as to be expected. But it's good for learning. Enter 'errortest' for an error message, enter 'many' for receiving multiple results, any other input string will be echoed with 'hello <string>!'",
+  "dataTypeList": ["domain", "fqdn", "ip", "other"],
+  "baseConfig": "helloWorld",
+  "command": "helloWorld/hello.py",
+  "configurationItems": [
+    {
+      "name": "limit",
+      "description": "Define the maximum number of results per request",
+      "type": "number",
+      "multi": false,
+      "required": false,
+      "defaultValue": 100
+    }
+  ]
+}
